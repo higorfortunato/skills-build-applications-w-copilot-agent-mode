@@ -16,6 +16,11 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+import os
+
+# REST API endpoints are available at:
+# Example: https://$CODESPACE_NAME-8000.app.github.dev/api/activities/
+# Do not hardcode $CODESPACE_NAME, Django will use ALLOWED_HOSTS and request host.
 from rest_framework import routers
 from .views import TeamViewSet, UserViewSet, ActivityViewSet, WorkoutViewSet, LeaderboardViewSet
 from rest_framework.decorators import api_view
